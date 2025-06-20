@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Você, Meu Amor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Tela inicial com coração -->
+    <div class="start-screen animate__animated animate__fadeIn">
+        <h1 class="title animate__animated animate__fadeInDown">Para Você, Amor</h1>
+        <div class="heart animate__animated animate__pulse animate__infinite" id="heart"></div>
+        <p class="instruction animate__animated animate__fadeInUp">Toque no coração</p>
+        <div class="hearts-background"></div>
+    </div>
+
+    <!-- Conteúdo principal (inicialmente escondido) -->
+    <div class="main-content hidden">
+        <div class="hearts-background"></div>
+        
+        <!-- Cabeçalho -->
+        <header class="animate__animated animate__fadeIn">
+            <h1 class="main-title">Minha Princesa</h1>
+            <div class="divider"></div>
+        </header>
+
+        <!-- Seção de fotos -->
+        <section class="photos" id="gallery">
+            <div class="photo-container" data-src="images/photo1.jpeg">
+                <img src="images/photo1.jpeg" alt="Nossa foto 1" class="photo">
+                <div class="photo-caption">Nosso primeiro encontro</div>
+            </div>
+            <div class="photo-container" data-src="images/photo2.jpeg">
+                <img src="images/photo2.jpeg" alt="Nossa foto 2" class="photo">
+                <div class="photo-caption">Momentos especiais</div>
+            </div>
+            <div class="photo-container" data-src="images/photo3.jpeg">
+                <img src="images/photo3.jpeg" alt="Nossa foto 3" class="photo">
+                <div class="photo-caption">Sempre juntos</div>
+            </div>
+        </section>
+
+        <!-- Primeiro texto -->
+        <section class="text-section">
+            <div class="text-container animate__animated">
+                <p class="editable" contenteditable="false" id="firstText">Desde o momento em que te conheci, minha vida ganhou novas cores. Cada dia ao seu lado é um presente que eu guardo com todo cuidado no meu coração. Você é a razão do meu sorriso todas as manhãs e a pessoa que eu mais amo nesse mundo.</p>
+            </div>
+        </section>
+
+        <!-- Balão de coração -->
+        <div class="balloon-container">
+            <div class="balloon-string"></div>
+            <div class="heart-balloon animate__animated animate__bounceIn" id="heartBalloon">
+                <div class="balloon-text">Clique em mim!</div>
+            </div>
+        </div>
+
+        <!-- Segundo texto -->
+        <section class="text-section">
+            <div class="text-container animate__animated">
+                <p class="editable" contenteditable="false" id="secondText">Quero passar o resto da minha vida ao seu lado, criando memórias, superando desafios e construindo nosso amor a cada dia. Você é minha pessoa favorita no mundo todo e eu te amo mais do que todas as palavras poderiam expressar.</p>
+            </div>
+        </section>
+
+        <!-- Música -->
+        <div class="music-player">
+            <audio controls loop id="bgMusic">
+                <source src="music" type="audio/mpeg">
+                Seu navegador não suporta áudio.
+            </audio>
+            <button id="musicToggle" class="music-toggle">🎵 Ligar Música</button>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="animate__animated animate__fadeIn">
+            <p>Feito com ❤️ por <span class="editable" contenteditable="false">[Seu Nome]</span></p>
+        </footer>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
